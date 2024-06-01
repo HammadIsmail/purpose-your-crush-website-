@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import emailjs from '@emailjs/browser';
-
+import sendEmail from "./SendEmail";
 const Letter = () => {
   const navigate = useNavigate();
   const firstDivRef = useRef(null);
@@ -50,24 +49,6 @@ const Letter = () => {
   };
 
  
-  const sendEmail = (Answer) => {
-    var templateParams = {
-      message:Answer
-    };
-    (function(){
-      emailjs.init({
-        publicKey: "jKYS-Zm28fRW5zF8Q",
-      });
-   })();
-    emailjs.send('service_42m4lca', 'template_5rfqb7d', templateParams).then(
-      (response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      },
-      (error) => {
-        console.log('FAILED...', error);
-      },
-    );
-  };
 
   return (
     <>
@@ -85,7 +66,7 @@ const Letter = () => {
             <svg className="text-red-400 w-72 h-72 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z" />
             </svg>
-            <h1 className="absolute bottom-[15rem] left-16 md:left-36 text-white font-extrabold text-5xl">Tehreem</h1>
+            <h1 className="absolute bottom-[15rem] left-16 md:left-36 text-white font-extrabold text-5xl">Name</h1>
             <span className="text-red-400 font-semibold text-2xl">Swipe &#8594;</span>
           </button>
         </div>
@@ -124,7 +105,7 @@ const Letter = () => {
           onTouchEnd={(event) => handleDragEnd(thirdDivRef, event)}
           className="p-6 mx-auto absolute md:left-[27.6rem] left-5 top-[5rem] w-[20rem] h-[30rem] md:w-[30rem] bg-[#fff0f3] shadow-2xl shadow-black rounded-lg flex flex-col"
         >
-          <p className="text-justify">یار میں سکول کے وقت سے ہی تمھیں بے انتہا پسند کرتا ہوں تب سے یہ بات میرے دل میں ہی تھی پھر کالج خود میں ہمت پیدا کی اور مجھے کچھ سمجھ نہیں ایا کہ اپنے جذبات کا کس طرح سے اظہار کروں اور چول مار بیٹھا اب میں نہیں جانتا کہ میرے بارے میں تمہاری کیا رائے ہے اس لیے تمھیں ایک منفرد طریقے پرپوز کرنے کا سوچا اور اس کے لیا یہ ویب سائٹ بنائی میں نے۔ میں سکول کے وقت سے ہی تم سے محبت کرتا ہوں بس کبھی اظہار نہیں کر پایا اور کالج میں بھی صحیح سے اظہار نہ کر پایا بس اب ایک دفع پھر اظہار کرنے کی کوشش کر رہا ہوں کہ میں اپ سے کہنا چاہتا ہوں کہ میں اپ سے بے انتہا محبت کرتا ہوں</p>
+          <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero exercitationem aliquam commodi repudiandae nam, fugiat fuga obcaecati perferendis praesentium quaerat modi. Laborum perspiciatis sapiente corporis minus repudiandae facere tempore ipsum, aut at cumque, sint, reiciendis temporibus optio culpa nisi in voluptatum tempora atque. Veritatis nulla similique nemo neque saepe voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus modi nulla sapiente distinctio at laborum numquam delectus ducimus? Adipisci quos provident similique esse cumque, voluptas rerum aspernatur hic non sapiente deserunt neque aliquid vero dolore assumenda facilis amet et? Minus expedita ab accusantium eveniet veritatis incidunt id atque! Modi, autem. Sed quos earum repellendus, laborum ducimus unde delectus </p>
           <div className="p-6 flex items-center justify-center">
             <span className="text-red-400 text-center font-semibold text-2xl">Swipe &#8594;</span>
           </div>
