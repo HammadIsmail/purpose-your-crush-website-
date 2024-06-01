@@ -105,7 +105,7 @@ const Letter = () => {
           onTouchEnd={(event) => handleDragEnd(thirdDivRef, event)}
           className="p-6 mx-auto absolute md:left-[27.6rem] left-5 top-[5rem] w-[20rem] h-[30rem] md:w-[30rem] bg-[#fff0f3] shadow-2xl shadow-black rounded-lg flex flex-col"
         >
-          <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero exercitationem aliquam commodi repudiandae nam, fugiat fuga obcaecati perferendis praesentium quaerat modi. Laborum perspiciatis sapiente corporis minus repudiandae facere tempore ipsum, aut at cumque, sint, reiciendis temporibus optio culpa nisi in voluptatum tempora atque. Veritatis nulla similique nemo neque saepe voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus modi nulla sapiente distinctio at laborum numquam delectus ducimus? Adipisci quos provident similique esse cumque, voluptas rerum aspernatur hic non sapiente deserunt neque aliquid vero dolore assumenda facilis amet et? Minus expedita ab accusantium eveniet veritatis incidunt id atque! Modi, autem. Sed quos earum repellendus, laborum ducimus unde delectus </p>
+          <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero exercitationem aliquam commodi repudiandae nam, fugiat fuga obcaecati perferendis praesentium quaerat modi.  </p>
           <div className="p-6 flex items-center justify-center">
             <span className="text-red-400 text-center font-semibold text-2xl">Swipe &#8594;</span>
           </div>
